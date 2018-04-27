@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link type="text/css" rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src="~/Scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/popper-utils.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <title> @ViewBag.Title </title>
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+
+            <div class="row">
+                <div class="col-md-7">
+                    @* <a id="logo" href="#">Заголовок</a>*@
+                </div>
+                    <div class="col-md-3">Приветствие</div>
+                    <div class="col-md-2">@DateTime.Now</div>
+                </div>
+
+        </header>
+
+        <nav nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+            <a class="navbar-brand" href="#">
+                <img src="/iron-man.svg" width="35" height="35" class="d-inline-block align-top" alt="">
+                Логотип
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">Справочники<span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="#">Расписание</a>
+                    <a class="nav-item nav-link active" href="#">Отчеты</a>
+                    <div class="dropdown show">
+                        <a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Учетные записи
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Пользователи</a>
+                            <a class="dropdown-item" href="#">Преподователи</a>               
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div role="main" class="jumbotron">
+            @RenderBody()
+        </div>        
+        <footer class="card-footer bg-light text-center">
+            2018 г.
+        </footer>
+    </div>
+
+</body>
+</html>
