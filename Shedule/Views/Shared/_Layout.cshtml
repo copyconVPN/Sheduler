@@ -43,10 +43,8 @@
                 <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="#">Расписание</a>
                     <a class="nav-item nav-link active" href="#">Отчеты</a>
-                    <div class="dropdown show">
-                        <span class="glyphicon glyphicon-list-alt"></span>
+                    <div class="dropdown show">        
                         <a class="nav-item nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLinkCatalogs" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-
                             Справочники
                             @*<span class="sr-only">(current)</span>*@
                         </a>
@@ -63,7 +61,7 @@
                             Учетные записи
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Пользователи</a>
+                            @Html.ActionLink("Пользователи", "Users", "Home")
                             <a class="dropdown-item" href="#">Преподователи</a>
                         </div>
                     </div>
@@ -74,7 +72,7 @@
             @RenderBody()
         </div>        
         <footer class="card-footer bg-light text-center">
-            2018 г.
+            &copy; @DateTime.Now.Year
         </footer>
     </div>
 

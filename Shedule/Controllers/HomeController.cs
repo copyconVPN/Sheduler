@@ -15,7 +15,8 @@ namespace Shedule.Controllers
         }
         public ActionResult Users()
         {
-            return View();
+            //ViewBag.Message = "Your contact page.";
+            return View("Users");
         }
     }
 }
